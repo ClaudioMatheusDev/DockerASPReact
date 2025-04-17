@@ -1,4 +1,8 @@
+using OrderService.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHostedService<RabbitMQConsumer>();
 
 // Adiciona suporte a controllers e Swagger
 builder.Services.AddControllers();
